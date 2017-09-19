@@ -5,9 +5,6 @@ import Time from './Time';
 
 
 class KioskView extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     return (
