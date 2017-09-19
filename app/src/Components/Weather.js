@@ -51,7 +51,8 @@ function getIcon(icon) {
 
 function getTemp (text) {
     let temp = text.match(/(\-?[0-9]+)/)[1] || [];
-    return Math.round(temp * 1.8 + 32);
+    // return Math.round(temp * 1.8 + 32);
+    return temp
 }
 
 
@@ -110,7 +111,7 @@ class Weather extends Component {
 
   renderWeatherToday () {
       const today = this.state.forecast.forecast.txt_forecast.forecastday[0];
-      const temp = getTemp(today.fcttext_metric);
+      const temp = getTemp(today.fcttext);
 
 
       let icon = getIcon(today.icon);
@@ -131,13 +132,13 @@ class Weather extends Component {
                 </div>
                 {tempElm}
             </div>
-            <p className="icon-description">{today.fcttext_metric}</p>
+            <p className="icon-description">{today.fcttext}</p>
           </div>
       );
   }
 
   renderDay (day, index) {
-      const temp = getTemp(day.fcttext_metric);
+      const temp = getTemp(day.fcttext);
       if (temp) {
           var tempElm = <div className="small-temp">{temp}</div>;
       }
@@ -145,7 +146,7 @@ class Weather extends Component {
       return (
             <div className="day" key={index}>
                 <div className="day-description">
-                    {day.fcttext_metric}
+                    {day.fcttext}
                 </div>
                 <div className="icon-wrapper">
                     <div className={`icon-small ${getIcon(day.icon)}`}>
