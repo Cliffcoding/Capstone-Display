@@ -9,6 +9,7 @@ class KioskView extends Component {
   render() {
     return (
       <div className="KioskView">
+
         <Time />
         <Weather />
         <DailyView />

@@ -15,24 +15,24 @@ body {
     max-width: 100%;
     background: #000000;
     margin-top: 2%;
-    padding: 1.5em;
+    padding: .5em;
     text-align: center;
-    position: fixed;
-    top: 15%;
-    left: 2%;
     color: #fff;
+    height: auto;
     /*transform: translate(-50%, -50%);*/
     /*box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);*/
 }
 .time {
-  margin-left: 5%;
+  float: right;
+  margin-top: 5%;
 }
 .weather-today {
-    height: 30vh;
+    height: 20vh;
     position: relative;
 }
 .weather-next-days {
-  margin-top: 2%;
+  height: 50vh;
+  margin-top: 20%;
 }
 h1 {
     font-size: 3em;
